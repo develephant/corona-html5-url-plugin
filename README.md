@@ -18,9 +18,7 @@ local url = require("url")
 
 ### absolute
 
-Builds an absolute URL from a base URL and a relative URL.
-
-Base is a string with the base URL. Relative is a string with the relative URL.
+Builds an absolute URL from a base URL and a relative URL. Base is a string with the base URL. Relative is a string with the relative URL.
 
 The function returns a string with the absolute URL.
 
@@ -30,11 +28,7 @@ local abs_url = url.absolute( base, relative )
 
 ### build
 
-Rebuilds an URL from its parts.
-
-Parsed_url is a table with same components returned by __[parse]()__.
-
-The function returns a string with the built URL.
+Rebuilds an URL from its parts. `parsed_url` is a table with same components returned by __[parse](#parse)__. The function returns a string with the built URL.
 
 ```lua
 local url_str = url.build( parsed_url )
@@ -56,9 +50,7 @@ local path = url.build_path( segments[, unsafe] )
 
 Applies the URL escaping content coding to a string Each byte is encoded as a percent character followed by the two byte hexadecimal representation of its integer value.
 
-Content is the string to be encoded.
-
-The function returns the encoded string.
+Content is the string to be encoded. The function returns the encoded string.
 
 ```lua
 local str = url.escape( str_to_escape  )
@@ -66,9 +58,7 @@ local str = url.escape( str_to_escape  )
 
 ### parse
 
-Parses an URL given as a string into a Lua table with its components.
-
-The function returns a table with all the URL components.
+Parses an URL given as a string into a Lua table with its components. The function returns a table with all the URL components.
 
 ```lua
 local parsed_url = url.parse( url[, parseQueryStr] )
@@ -118,9 +108,7 @@ parsed = {
 
 ### parse_path
 
-Breaks a <path> URL component into all its <segment> parts.
-
-Path is a string with the path to be parsed.
+Breaks a <path> URL component into all its <segment> parts. Path is a string with the path to be parsed.
 
 Since some characters are reserved in URLs, they must be escaped whenever present in a <path> component. Therefore, before returning a table array with all the parsed segments, the function removes escaping from all of them.
 
@@ -130,16 +118,11 @@ local parts = url.parse_path( path )
 
 ### unescape
 
-Removes the URL escaping content coding from a string.
-
-Content is the string to be decoded.
-
-The function returns the decoded string.
+Removes the URL escaping content coding from a string. Content is the string to be decoded. The function returns the decoded string.
 
 ```lua
 local str = url.unescape( str_to_unescape )
 ```
-
 
 ---
 
