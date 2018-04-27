@@ -106,6 +106,19 @@ parsed = {
 }
 ```
 
+If the `parseQueryStr` flag is `true`:
+
+```lua
+parsed = {
+  ...
+  query = {
+    name = "jim",
+    key = 123
+  }
+  ...
+}
+```
+
 ### parse_path
 
 Breaks a <path> URL component into all its <segment> parts. Path is a string with the path to be parsed.
