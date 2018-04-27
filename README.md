@@ -87,7 +87,7 @@ parsed_url = {
 __Example__
 
 ```lua
-local parsed = url.parse("https://sparky:1234@www.coroniumcore.com:2001/fun/times/?name=jim&key=123#taco")
+local parsed = url.parse("https://sparky:mypw@www.coroniumcore.com:2001/fun/times/?name=jim&key=123#taco")
 
 parsed = {
   hash = "#taco"
