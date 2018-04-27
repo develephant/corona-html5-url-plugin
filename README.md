@@ -34,6 +34,17 @@ Rebuilds an URL from its parts. `parsed_url` is a table with same components ret
 local url_str = url.build( parsed_url )
 ```
 
+__Example__
+
+```lua
+local url_str = url.build({
+  protocol = "https:",
+  host = "coroniumcore.com",
+  port = 2001
+})
+print(url_str) --> https://coroniumcore.com:2001/
+```
+
 ### build_path
 
 Builds a <path> component from a list of <segment> parts. Before composition, any reserved characters found in a segment are escaped into their protected form, so that the resulting path is a valid URL path component.

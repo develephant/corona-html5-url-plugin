@@ -13,7 +13,7 @@ print(urlstr)
 --#############################################################################
 --# parsed, querystring as string
 --#############################################################################
-local parsed = url.parse("https://sparky:1234@www.coroniumcore.com:2001/fun/times/?name=jim&key=123#taco")
+local parsed = url.parse("https://sparky:mypw@www.coroniumcore.com:2001/fun/times/?name=jim&key=123#taco")
 for k, v in pairs(parsed) do
   print(k, v)
 end
@@ -21,7 +21,7 @@ end
 --#############################################################################
 --# parsed, querystring as table
 --#############################################################################
-local parsed = url.parse("https://sparky:1234@www.coroniumcore.com:2001/fun/times/?name=jim&key=123#taco", true)
+local parsed = url.parse("https://sparky:mypw@www.coroniumcore.com:2001/fun/times/?name=jim&key=123#taco", true)
 for k, v in pairs(parsed) do
   print(k, v)
   if k == 'query' then
