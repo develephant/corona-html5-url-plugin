@@ -47,7 +47,7 @@ print(url_str) --> https://coroniumcore.com:2001/
 
 ### build_path
 
-Builds a <path> component from a list of <segment> parts. Before composition, any reserved characters found in a segment are escaped into their protected form, so that the resulting path is a valid URL path component.
+Builds a <path> component from a table array of <segment> parts. Before composition, any reserved characters found in a segment are escaped into their protected form, so that the resulting path is a valid URL path component.
 
 Segments is a table array of strings with the <segment> parts. If unsafe is `true`, reserved characters are left untouched.
 
@@ -59,7 +59,7 @@ local path = url.build_path( segments[, unsafe] )
 
 ### escape
 
-Applies the URL escaping content coding to a string Each byte is encoded as a percent character followed by the two byte hexadecimal representation of its integer value.
+Applies the URL escaping content coding to a string. Each byte is encoded as a percent character followed by the two byte hexadecimal representation of its integer value.
 
 Content is the string to be encoded. The function returns the encoded string.
 
